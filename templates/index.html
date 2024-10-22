@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de perfil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/image.png'); /* Substitua pelo caminho da sua imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            background-attachment: fixed; /* Para que o fundo fique fixo enquanto rola a página */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+            padding: 20px;
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+            margin-top: 20px; /* Espaço acima do container */
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 150px; /* Tamanho da logo */
+            height: auto;
+        }
+
+        form {
+            background-color: transparent; /* O formulário compartilha o fundo com o container */
+            padding: 20px 0 0 0; /* Remove padding superior/inferior no formulário, já aplicado no container */
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para os placeholders */
+        ::placeholder {
+            color: #aaa;
+            opacity: 1; /* Para navegadores mais antigos */
+        }
+
+        /* Ajuste responsivo para mobile */
+        @media (max-width: 600px) {
+            input[type="text"], input[type="email"] {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+
+        /* Estilo do botão */
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #8CCE91;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #77b779;
+        }
+
+        /* Foco nos campos */
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #8CCE91;
+            outline: none;
+            box-shadow: 0 0 5px rgba(140, 206, 145, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Container que engloba a logo e o formulário -->
+    <div class="container">
+        <!-- Logo PNG sobre fundo translúcido -->
+        <img src="static\Group 39520.png" alt="Logo Formulário Praceando" class="logo">
+    <form>
+        <div class="question">
+            <label>1. Qual é a sua faixa etária?</label>
+            <input type="radio" name="faixa_etaria" value="Menor que 18 anos">Menor que 18 anos<br>
+            <input type="radio" name="faixa_etaria" value="Entre 18 e 30 anos">Entre 18 e 30 anos<br>
+            <input type="radio" name="faixa_etaria" value="Entre 30 e 59 anos">Entre 30 e 59 anos<br>
+            <input type="radio" name="faixa_etaria" value="Mais que 60 anos">Mais que 60 anos
+        </div>
+
+        <div class="question">
+            <label>2. Você mora na cidade de São Paulo?</label>
+            <input type="radio" name="mora_sp" value="Sim">Sim<br>
+            <input type="radio" name="mora_sp" value="Outra">Outra: <input type="text" name="outra_cidade" placeholder="Digite sua cidade">
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="question">
+            <label>3. Em que zona da cidade de São Paulo você mora?</label>
+            <input type="radio" name="zona_sp" value="Norte">Norte<br>
+            <input type="radio" name="zona_sp" value="Sul">Sul<br>
+            <input type="radio" name="zona_sp" value="Leste">Leste<br>
+            <input type="radio" name="zona_sp" value="Oeste">Oeste<br>
+            <input type="radio" name="zona_sp" value="Centro">Centro
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="question">
+            <label>4. Você costuma organizar ou participar de eventos em praças e parques?</label>
+            <input type="radio" name="eventos" value="Organizo eventos">Organizo eventos<br>
+            <input type="radio" name="eventos" value="Participo de eventos">Participo de eventos<br>
+            <input type="radio" name="eventos" value="Ambos">Ambos<br>
+            <input type="radio" name="eventos" value="Nenhum">Nenhum
+        </div>
+
+        <!-- Demais perguntas seguem o mesmo estilo -->
+        <!-- Pergunta 5 -->
+        <div class="question">
+            <label>5. Você encontra dificuldade em divulgar seus eventos?</label>
+            <input type="radio" name="dificuldade_divulgacao" value="Sim">Sim<br>
+            <input type="radio" name="dificuldade_divulgacao" value="Não">Não
+        </div>
+
+        <!-- Pergunta 6 -->
+        <div class="question">
+            <label>6. Você tem dificuldade em encontrar eventos?</label>
+            <input type="radio" name="dificuldade_encontrar" value="Sim">Sim<br>
+            <input type="radio" name="dificuldade_encontrar" value="Não">Não
+        </div>
+
+        <!-- Pergunta 7 -->
+        <div class="question">
+            <label>7. Você se considera um microempreendedor?</label>
+            <input type="radio" name="microempreendedor" value="Sim">Sim<br>
+            <input type="radio" name="microempreendedor" value="Não">Não
+        </div>
+
+        <!-- Pergunta 8 -->
+        <div class="question">
+            <label>8. Como você costuma divulgar seus eventos atualmente? (Selecione todas as opções que se aplicam)</label>
+            <input type="checkbox" name="divulgacao" value="Redes sociais">Redes sociais (Instagram, Facebook, etc.)<br>
+            <input type="checkbox" name="divulgacao" value="Boca a boca">Boca a boca<br>
+            <input type="checkbox" name="divulgacao" value="Panfletos/flyers">Panfletos/flyers<br>
+            <input type="checkbox" name="divulgacao" value="Sites ou blogs">Sites ou blogs
+        </div>
+
+        <!-- Pergunta 9 -->
+        <div class="question">
+            <label>9. Com que frequência você organiza eventos em espaços públicos como praças e parques?</label>
+            <input type="radio" name="frequencia_eventos" value="Raramente">Raramente (1-2 vezes por ano)<br>
+            <input type="radio" name="frequencia_eventos" value="Ocasionalmente">Ocasionalmente (3-6 vezes por ano)<br>
+            <input type="radio" name="frequencia_eventos" value="Frequentemente">Frequentemente (7 ou mais vezes por ano)
+        </div>
+
+        <!-- Pergunta 10 -->
+        <div class="question">
+            <label>10. Qual seria a sua disposição para pagar um valor simbólico para anunciar seus eventos em um aplicativo especializado em praças e parques?</label>
+            <input type="radio" name="disposicao_pagamento" value="Com certeza pagaria">Com certeza pagaria<br>
+            <input type="radio" name="disposicao_pagamento" value="Pagaria dependendo do valor">Pagaria dependendo do valor<br>
+            <input type="radio" name="disposicao_pagamento" value="Não pagaria">Não pagaria
+        </div>
+
+        <!-- Pergunta 11 -->
+        <div class="question">
+            <label>11. Se você utiliza ou utilizaria um aplicativo para promover seus eventos, qual das seguintes funcionalidades seria mais útil para você?</label>
+            <input type="checkbox" name="funcionalidades" value="Calendário">Calendário para organizar e visualizar seus eventos<br>
+            <input type="checkbox" name="funcionalidades" value="Mapa">Mapa para indicar os parques e praças atendidos<br>
+            <input type="checkbox" name="funcionalidades" value="Análise de dados">Análise de dados sobre seu público (faixa etária, preferências, etc.)<br>
+            <input type="checkbox" name="funcionalidades" value="Visibilidade">Visibilidade ampliada para seus eventos<br>
+            <input type="checkbox" name="funcionalidades" value="Feedbacks">Feedbacks e comentários dos participantes<br>
+            <input type="checkbox" name="funcionalidades" value="Tags populares">Indicador de tags mais populares entre os consumidores
+        </div>
+
+        <!-- Pergunta 12 -->
+        <div class="question">
+            <label>12. Que tipo de evento você organiza ou participaria em praças ou parques? (Selecione todos que se aplicam)</label>
+            <input type="checkbox" name="tipo_evento" value="Música">Música<br>
+            <input type="checkbox" name="tipo_evento" value="Alimentação">Alimentação<br>
+            <input type="checkbox" name="tipo_evento" value="Lazer">Lazer<br>
+            <input type="checkbox" name="tipo_evento" value="Literatura">Literatura<br>
+            <input type="checkbox" name="tipo_evento" value="Fotografia">Fotografia<br>
+            <input type="checkbox" name="tipo_evento" value="Meio Ambiente">Meio Ambiente<br>
+            <input type="checkbox" name="tipo_evento" value="Esporte">Esporte<br>
+            <input type="checkbox" name="tipo_evento" value="Outra">Outra: <input type="text" name="outro_evento" placeholder="Descreva outro tipo de evento">
+        </div>
+
+        <!-- Pergunta 13 -->
+        <div class="question">
+            <label>13. Quais fatores são mais importantes para você na escolha de um aplicativo de divulgação de eventos?</label>
+            <input type="radio" name="fatores_importantes" value="Facilidade de uso">Facilidade de uso<br>
+            <input type="radio" name="fatores_importantes" value="Alcance do público">Alcance do público<br>
+            <input type="radio" name="fatores_importantes" value="Custo-benefício">Custo-benefício<br>
+            <input type="radio" name="fatores_importantes" value="Análise de dados">Análise de dados sobre o público<br>
+            <input type="radio" name="fatores_importantes" value="Funções de personalização">Funções de personalização (notas, tags, etc.)
+        </div>
+
+        <!-- Pergunta 14 -->
+        <div class="question">
+            <label>14. Você gostaria de ser notificado quando o aplicativo Praceando expandir sua atuação para novas regiões ou oferecer novas funcionalidades?</label>
+            <input type="radio" name="notificacao" value="Sim">Sim<br>
+            <input type="radio" name="notificacao" value="Não">Não
+        </div>
+
+        <!-- Pergunta 15 -->
+        <div class="question">
+            <label>15. Deixe seu e-mail para ser notificado!</label>
+            <input type="email" name="email" placeholder="Insira seu e-mail">
+        </div>
+
+        <!-- Botão de envio -->
+        <button type="submit">Enviar Respostas</button>
+    </form>
+</body>
+</html>
