@@ -1,0 +1,99 @@
+Id,faixa_etaria,regiao,tipo_usuario,dificuldade_divulgacao,difuculdade_participacao,is_microempreendedor,frequencia_divulgacao,pagar_divulgacao,receber_notificacao,meios_divulgacao_boca_a_boca,meios_divulgacao_não_costumo_divulgar,meios_divulgacao_panfletos/flyers,meios_divulgacao_redes_sociais,meios_divulgacao_sites_ou_blogs,is_anunciante
+1,menor que 18 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,com certeza pagaria,não,False,True,False,False,False,1
+2,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,pagaria dependendo do valor,não,False,True,False,False,False,1
+3,entre 30 e 59 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+4,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+5,entre 18 e 30 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+6,entre 30 e 59 anos,leste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+7,entre 18 e 30 anos,n/a regiao,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+8,entre 30 e 59 anos,n/a regiao,ambos,sim,não,não,raramente (1-2 vezes por ano),pagaria dependendo do valor,sim,True,False,False,False,False,1
+8,entre 30 e 59 anos,n/a regiao,ambos,sim,não,não,raramente (1-2 vezes por ano),pagaria dependendo do valor,sim,False,False,False,True,False,1
+9,entre 30 e 59 anos,oeste,ambos,não,não,não,ocasionalmente (3-6 vezes por ano),pagaria dependendo do valor,sim,False,False,False,True,False,1
+10,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+11,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+12,entre 30 e 59 anos,n/a regiao,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+13,entre 30 e 59 anos,n/a regiao,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+14,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+15,entre 18 e 30 anos,n/a regiao,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+16,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+17,entre 18 e 30 anos,n/a regiao,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+18,entre 30 e 59 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+19,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+20,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+21,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+22,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+23,mais que 60 anos,leste,participo de eventos,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+24,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+25,entre 30 e 59 anos,oeste,participo de eventos,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+26,entre 30 e 59 anos,oeste,ambos,não,não,não,ocasionalmente (3-6 vezes por ano),pagaria dependendo do valor,sim,False,False,True,False,False,1
+26,entre 30 e 59 anos,oeste,ambos,não,não,não,ocasionalmente (3-6 vezes por ano),pagaria dependendo do valor,sim,True,False,False,False,False,1
+27,mais que 60 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+28,mais que 60 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+29,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+30,menor que 18 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+31,menor que 18 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+32,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+33,menor que 18 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+34,entre 18 e 30 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+35,menor que 18 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+36,menor que 18 anos,n/a regiao,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+37,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+38,menor que 18 anos,oeste,participo de eventos,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+39,menor que 18 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+40,menor que 18 anos,oeste,participo de eventos,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+41,menor que 18 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+42,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+43,entre 30 e 59 anos,n/a regiao,participo de eventos,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+44,entre 18 e 30 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+45,menor que 18 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+46,menor que 18 anos,leste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+47,menor que 18 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+48,menor que 18 anos,n/a regiao,participo de eventos,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,1
+49,entre 30 e 59 anos,centro,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+50,menor que 18 anos,oeste,ambos,sim,não,não,raramente (1-2 vezes por ano),pagaria dependendo do valor,sim,False,False,False,True,False,1
+51,menor que 18 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+52,menor que 18 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+53,entre 30 e 59 anos,norte,organizo eventos,sim,não,sim,ocasionalmente (3-6 vezes por ano),pagaria dependendo do valor,não,False,False,False,True,False,1
+53,entre 30 e 59 anos,norte,organizo eventos,sim,não,sim,ocasionalmente (3-6 vezes por ano),pagaria dependendo do valor,não,True,False,False,False,False,1
+54,entre 18 e 30 anos,sul,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+55,entre 18 e 30 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+56,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+57,entre 30 e 59 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+58,menor que 18 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+59,menor que 18 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+60,menor que 18 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+61,menor que 18 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+62,menor que 18 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+63,menor que 18 anos,oeste,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+64,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+65,menor que 18 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+66,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+67,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+68,entre 30 e 59 anos,n/a regiao,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+69,menor que 18 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+70,menor que 18 anos,leste,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+71,menor que 18 anos,oeste,participo de eventos,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+72,menor que 18 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+73,entre 18 e 30 anos,sul,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+74,menor que 18 anos,oeste,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+75,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+76,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+77,entre 18 e 30 anos,n/a regiao,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+78,menor que 18 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+79,entre 30 e 59 anos,norte,organizo eventos,sim,não,sim,frequentemente (7 ou mais vezes por ano),com certeza pagaria,não,False,False,False,True,False,1
+79,entre 30 e 59 anos,norte,organizo eventos,sim,não,sim,frequentemente (7 ou mais vezes por ano),com certeza pagaria,não,True,False,False,False,False,1
+80,menor que 18 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+81,entre 30 e 59 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+82,mais que 60 anos,norte,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+83,menor que 18 anos,norte,nenhum,não,não,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+84,entre 30 e 59 anos,n/a regiao,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+85,entre 18 e 30 anos,sul,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+86,menor que 18 anos,sul,participo de eventos,não,sim,não,não costumo divulgar,não pagaria,não,False,True,False,False,False,0
+87,mais que 60 anos,n/a regiao,nenhum,não,não,não,não costumo divulgar,não pagaria,sim,False,True,False,False,False,0
+88,entre 30 e 59 anos,norte,organizo eventos,sim,não,sim,frequentemente (7 ou mais vezes por ano),pagaria dependendo do valor,sim,False,False,False,True,False,1
+88,entre 30 e 59 anos,norte,organizo eventos,sim,não,sim,frequentemente (7 ou mais vezes por ano),pagaria dependendo do valor,sim,True,False,False,False,False,1
+89,entre 18 e 30 anos,sul,ambos,sim,não,sim,ocasionalmente (3-6 vezes por ano),com certeza pagaria,sim,False,False,True,False,False,1
+90,entre 18 e 30 anos,oeste,organizo eventos,sim,não,sim,frequentemente (7 ou mais vezes por ano),com certeza pagaria,sim,False,False,False,False,True,1
+91,entre 30 e 59 anos,centro,ambos,sim,não,sim,ocasionalmente (3-6 vezes por ano),com certeza pagaria,sim,False,False,False,True,False,1
+92,mais que 60 anos,n/a regiao,organizo eventos,sim,não,sim,frequentemente (7 ou mais vezes por ano),pagaria dependendo do valor,sim,True,False,False,False,False,1
+92,mais que 60 anos,n/a regiao,organizo eventos,sim,não,sim,frequentemente (7 ou mais vezes por ano),pagaria dependendo do valor,sim,False,False,True,False,False,1

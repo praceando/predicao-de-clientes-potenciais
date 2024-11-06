@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .message {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .positive {
+            color: #FFD700; /* Dourado */
+        }
+
+        .negative {
+            color: #8B0000; /* Rosa escuro */
+        }
+    </style>
+</head>
+<body>
+    <div id="responseMessage" class="message">
+        Obrigado por responder!
+    </div>
+
+    <script>
+        // Simulação de resposta da IA para fins de demonstração
+        const isPositive = true; // Altere para false para ver a cor negativa
+
+        const messageDiv = document.getElementById('responseMessage');
+        if (isPositive) {
+            messageDiv.classList.add('positive');
+            messageDiv.textContent = 'Obrigado por responder! Sua resposta foi positiva!';
+        } else {
+            messageDiv.classList.add('negative');
+            messageDiv.textContent = 'Obrigado por responder! Sua resposta foi registrada.';
+        }
+    </script>
+</body>
+</html>
