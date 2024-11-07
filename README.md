@@ -1,53 +1,61 @@
 # Predição de Potenciais Anunciantes - Praceando
 
 ## Descrição do Projeto
-Este projeto tem como objetivo realizar a **clusterização de potenciais anunciantes** para o aplicativo **Praceando**, identificando perfis de usuários que possuam maior potencial para se tornarem anunciantes do app. A partir de uma base de dados coletada através de um formulário, aplicamos técnicas de análise exploratória, redução de dimensionalidade e clustering, utilizando algoritmos de aprendizado não supervisionado.
-
-## Objetivo
-O objetivo principal é **identificar padrões de comportamento** e **segmentar os usuários** em clusters, de forma a identificar aqueles que têm maior interesse em anunciar eventos no Praceando. Através dessa segmentação, conseguimos diferenciar os perfis e encontrar os potenciais anunciantes, auxiliando na criação de estratégias personalizadas para cada grupo.
+Este projeto visa a **predição de potenciais clientes** para o aplicativo **Praceando**, através de técnicas de clusterização e classificação. A principal meta é identificar usuários com alto potencial para se tornarem **anunciantes** do aplicativo, utilizando algoritmos de aprendizado de máquina para identificar padrões e prever esses potenciais. Esta análise possibilita direcionar campanhas de marketing mais eficazes e otimizar as estratégias de monetização do Praceando.
 
 ## Bibliotecas Utilizadas
-- **Pandas**: Manipulação e tratamento da base de dados.
-- **Matplotlib**: Visualização de dados para análise e entendimento dos clusters.
+- **Pandas, NumPy**: Manipulação e tratamento de dados.
+- **Matplotlib, Seaborn**: Visualização dos dados e métricas de desempenho dos modelos.
 - **Scikit-learn**:
-  - **KMeans**: Algoritmo de clusterização utilizado para agrupar os dados.
-  - **PCA** (Principal Component Analysis): Redução da dimensionalidade dos dados para facilitar a visualização e melhorar a performance do algoritmo de clusterização.
+  - **Pipeline, ColumnTransformer**: Para pré-processamento dos dados.
+  - **StandardScaler, OrdinalEncoder, OneHotEncoder**: Escalonamento e codificação das features.
+  - **KMeans, PCA (Principal Component Analysis)**: Técnicas de clusterização e redução de dimensionalidade.
+  - **Naive Bayes, Decision Tree, K-Nearest Neighbors**: Modelos de classificação.
+  - **train_test_split, KFold, GridSearchCV**: Para separação dos dados e validação cruzada.
+  - **Métricas de avaliação**: Precisão, F1-score, matriz de confusão, entre outras.
 - **Yellowbrick**:
-  - **KElbowVisualizer**: Visualização da métrica para determinar o número ideal de clusters.
+  - **KElbowVisualizer**: Para identificar o número ideal de clusters.
+- **Imbalanced-Learn (SMOTE)**: Para balanceamento de classes e lidar com o problema de desbalanceamento dos dados.
 
 ## Etapas do Projeto
 
-### 1. Consumo de Dados e Definição de Features
-Carregamos os dados da planilha **Praceando.xlsx**, que continha **92 linhas e 20 colunas** com respostas sobre o comportamento e preferências dos usuários em relação à organização e participação em eventos públicos.
+### 1. Consumo e Tratamento de Dados
+- **Consumo dos Dados**: A base de dados utilizada foi a **Praceando_supervisionado.csv**, que contém informações dos usuários que participaram de um formulário sobre eventos públicos.
+- **Pré-Processamento**:
+  - **Remoção de colunas irrelevantes**, como IDs.
+  - **Codificação das features categóricas** utilizando **OrdinalEncoder**.
+  - **Escalonamento das features** numéricas utilizando **StandardScaler**.
+  - Utilizamos um **Pipeline** para aplicar todas essas transformações, garantindo um processo automatizado e padronizado.
 
-### 2. Tratamento das Features
-- **Remoção de Features Redundantes**: Eliminamos colunas desnecessárias, como e-mail e informações repetitivas, para focar nas informações que realmente contribuem para a análise.
-- **Renomeação de Colunas**: Padronizamos os nomes das colunas para facilitar o uso e melhorar a legibilidade do código.
-- **Tratamento de Valores Nulos**: Valores nulos foram preenchidos com opções padrão, garantindo que os dados estivessem completos e prontos para a análise.
-- **Tratamento Personalizado**: Realizamos transformações específicas, como padronização de textos para minúsculas e conversão de categorias para valores numéricos, de modo a preparar os dados para a clusterização.
+### 2. Clusterização de Potenciais Clientes
+Aplicamos técnicas de **clusterização** usando **KMeans** e determinamos a quantidade ideal de clusters com o **KElbowVisualizer**. A clusterização ajudou a entender os diferentes perfis dos usuários e identificar grupos com maior potencial para se tornarem anunciantes.
 
-### 3. Redução de Dimensionalidade com PCA
-Utilizamos **PCA (Principal Component Analysis)** para reduzir a dimensionalidade dos dados a **3 componentes principais**. Esta técnica permitiu visualizar os dados de maneira simplificada, mantendo uma alta variância explicada, o que facilita a análise dos clusters formados.
+### 3. Modelagem Preditiva
+- Foram utilizados três modelos principais para a predição:
+  1. **Naive Bayes (GaussianNB)**.
+  2. **Árvore de Decisão (Decision Tree Classifier)**.
+  3. **K-Nearest Neighbors (KNN)**.
+- Utilizamos **validação cruzada (KFold)** para garantir a robustez dos resultados dos modelos e **GridSearchCV** para encontrar os melhores hiperparâmetros.
+- **Métricas Avaliadas**: Precisão, F1-score e matriz de confusão foram as principais métricas utilizadas para avaliar a performance dos modelos.
 
-### 4. Clusterização dos Usuários
-- Utilizamos o algoritmo de **KMeans** para agrupar os usuários em **6 clusters**, selecionando o número de clusters com base no método **Elbow**, que utiliza a métrica de **silhouette score**.
-- Os clusters foram analisados para identificar padrões entre os usuários, permitindo definir perfis de potenciais anunciantes.
+### 4. Balanceamento de Classes
+Utilizamos o **SMOTE** para balancear a base de dados devido ao desbalanceamento entre as classes "anunciante" e "não anunciante". O SMOTE gerou novas amostras sintéticas da classe minoritária, garantindo que os modelos tivessem dados mais equilibrados para treinar, o que melhorou a capacidade de generalização dos modelos.
 
-### 5. Análise dos Clusters
-- Os usuários foram agrupados em **clusters** de acordo com variáveis como:
-  - **Faixa etária**.
-  - **Dificuldade em divulgar eventos**.
-  - **Frequência de organização de eventos**.
-  - **Disposição para pagar por divulgação**.
-- A partir dessa análise, identificamos quais clusters tinham maior probabilidade de conter potenciais anunciantes.
+### 5. Redução de Dimensionalidade com PCA
+Para facilitar a visualização e reduzir a complexidade dos dados, aplicamos **PCA** (Principal Component Analysis). A técnica foi utilizada para reduzir a quantidade de variáveis, preservando a variância explicada e permitindo uma análise mais direta dos padrões presentes nos dados.
 
-### 6. Resultados e Conclusões
-Com base na análise dos clusters, determinamos que:
-- Alguns clusters, como o **Cluster 4**, apresentavam características ideais para possíveis anunciantes, como maior frequência de organização de eventos e disposição para pagar por divulgação.
-- As variáveis que mais influenciaram na clusterização incluíram o **tipo de evento organizado**, **meios de divulgação utilizados** e **região de residência**.
+### 6. Serialização do Melhor Modelo
+Após testar os modelos, o **KNN** com os melhores hiperparâmetros e utilizando SMOTE apresentou o melhor desempenho. Esse modelo foi então **serializado** utilizando **Joblib**, facilitando sua aplicação futura para predições de novos dados.
 
-## Visualização dos Clusters
-Foi feita uma visualização dos clusters em um gráfico **3D** utilizando as componentes principais (PCA1, PCA2, PCA3). Isso nos permitiu entender como os usuários estavam agrupados e identificar quais clusters representavam um maior potencial de anúncios no Praceando.
+### 7. Resultados e Conclusões
+- **Clusters de Potenciais Anunciantes**: Os usuários foram agrupados em diferentes clusters, dos quais identificamos grupos que apresentavam maior disposição para pagar por anúncios e maior frequência de organização de eventos.
+- **Melhor Modelo Preditivo**: O **KNN** com hiperparâmetros otimizados e usando dados balanceados com **SMOTE** mostrou o melhor desempenho para prever os potenciais anunciantes do Praceando.
+
+## Visualização dos Resultados
+- **Clusterização**: Gráficos **3D** utilizando as componentes principais foram gerados para visualizar a distribuição dos clusters e entender melhor os padrões de comportamento dos usuários.
+- **Matriz de Confusão**: Cada modelo gerou uma matriz de confusão que foi visualizada para avaliar a capacidade do modelo em distinguir corretamente entre anunciantes e não anunciantes.
+
+![Visualização dos Clusters](link-para-imagem)
 
 ## Como Executar o Projeto
 ### Pré-requisitos
@@ -68,8 +76,6 @@ Foi feita uma visualização dos clusters em um gráfico **3D** utilizando as co
    ```bash
    python clusterizacao_anunciantes.py
    ```
-## Conclusão
-O projeto de clusterização de potenciais anunciantes do Praceando foi fundamental para **identificar padrões de comportamento** dos usuários, segmentando-os em grupos com diferentes níveis de interesse em anúncios. Essa análise contribui para decisões mais assertivas em campanhas e para um melhor direcionamento de funcionalidades específicas do aplicativo.
 
 Para mais informações, entre em contato com os membros da equipe de dados :
 - [Fernanda Leão](https://github.com/fernandaleaoleita)
