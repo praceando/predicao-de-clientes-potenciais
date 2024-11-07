@@ -118,8 +118,8 @@
     <div class="container">
         <!-- Logo PNG sobre fundo translúcido -->
         <img src="static\Group 39520.png" alt="Logo Formulário Praceando" class="logo">
-    <form>
-        <div class="question">
+    <form id="forms" method="post" action="{{ url_for('novos_dados') }}">
+            <div class="question">
             <label>1. Qual é a sua faixa etária?</label>
             <input type="radio" name="faixa_etaria" value="Menor que 18 anos">Menor que 18 anos<br>
             <input type="radio" name="faixa_etaria" value="Entre 18 e 30 anos">Entre 18 e 30 anos<br>
@@ -136,20 +136,20 @@
         <!-- Pergunta 3 -->
         <div class="question">
             <label>3. Em que zona da cidade de São Paulo você mora?</label>
-            <input type="radio" name="zona_sp" value="Norte">Norte<br>
-            <input type="radio" name="zona_sp" value="Sul">Sul<br>
-            <input type="radio" name="zona_sp" value="Leste">Leste<br>
-            <input type="radio" name="zona_sp" value="Oeste">Oeste<br>
-            <input type="radio" name="zona_sp" value="Centro">Centro
+            <input type="radio" name="regiao" value="Norte">Norte<br>
+            <input type="radio" name="regiao" value="Sul">Sul<br>
+            <input type="radio" name="regiao" value="Leste">Leste<br>
+            <input type="radio" name="regiao" value="Oeste">Oeste<br>
+            <input type="radio" name="regiao" value="Centro">Centro
         </div>
 
         <!-- Pergunta 4 -->
         <div class="question">
             <label>4. Você costuma organizar ou participar de eventos em praças e parques?</label>
-            <input type="radio" name="eventos" value="Organizo eventos">Organizo eventos<br>
-            <input type="radio" name="eventos" value="Participo de eventos">Participo de eventos<br>
-            <input type="radio" name="eventos" value="Ambos">Ambos<br>
-            <input type="radio" name="eventos" value="Nenhum">Nenhum
+            <input type="radio" name="tipo_usuario" value="Organizo eventos">Organizo eventos<br>
+            <input type="radio" name="tipo_usuario" value="Participo de eventos">Participo de eventos<br>
+            <input type="radio" name="tipo_usuario" value="Ambos">Ambos<br>
+            <input type="radio" name="tipo_usuario" value="Nenhum">Nenhum
         </div>
 
         <!-- Demais perguntas seguem o mesmo estilo -->
@@ -163,40 +163,40 @@
         <!-- Pergunta 6 -->
         <div class="question">
             <label>6. Você tem dificuldade em encontrar eventos?</label>
-            <input type="radio" name="dificuldade_encontrar" value="Sim">Sim<br>
-            <input type="radio" name="dificuldade_encontrar" value="Não">Não
+            <input type="radio" name="difuculdade_participacao" value="Sim">Sim<br>
+            <input type="radio" name="difuculdade_participacao" value="Não">Não
         </div>
 
         <!-- Pergunta 7 -->
         <div class="question">
             <label>7. Você se considera um microempreendedor?</label>
-            <input type="radio" name="microempreendedor" value="Sim">Sim<br>
-            <input type="radio" name="microempreendedor" value="Não">Não
+            <input type="radio" name="is_microempreendedor" value="Sim">Sim<br>
+            <input type="radio" name="is_microempreendedor" value="Não">Não
         </div>
 
         <!-- Pergunta 8 -->
         <div class="question">
             <label>8. Como você costuma divulgar seus eventos atualmente? (Selecione todas as opções que se aplicam)</label>
-            <input type="checkbox" name="divulgacao" value="Redes sociais">Redes sociais (Instagram, Facebook, etc.)<br>
-            <input type="checkbox" name="divulgacao" value="Boca a boca">Boca a boca<br>
-            <input type="checkbox" name="divulgacao" value="Panfletos/flyers">Panfletos/flyers<br>
-            <input type="checkbox" name="divulgacao" value="Sites ou blogs">Sites ou blogs
+            <input type="checkbox" name="meios_divulgacao" value="Redes sociais (Instagram, Facebook, etc.)">Redes sociais (Instagram, Facebook, etc.)<br>
+            <input type="checkbox" name="meios_divulgacao" value="Boca a boca">Boca a boca<br>
+            <input type="checkbox" name="meios_divulgacao" value="Panfletos/flyers">Panfletos/flyers<br>
+            <input type="checkbox" name="meios_divulgacao" value="Sites ou blogs">Sites ou blogs
         </div>
 
         <!-- Pergunta 9 -->
         <div class="question">
             <label>9. Com que frequência você organiza eventos em espaços públicos como praças e parques?</label>
-            <input type="radio" name="frequencia_eventos" value="Raramente">Raramente (1-2 vezes por ano)<br>
-            <input type="radio" name="frequencia_eventos" value="Ocasionalmente">Ocasionalmente (3-6 vezes por ano)<br>
-            <input type="radio" name="frequencia_eventos" value="Frequentemente">Frequentemente (7 ou mais vezes por ano)
+            <input type="radio" name="frequencia_divulgacao" value="Raramente (1-2 vezes por ano)">Raramente (1-2 vezes por ano)<br>
+            <input type="radio" name="frequencia_divulgacao" value="Ocasionalmente (3-6 vezes por ano)">Ocasionalmente (3-6 vezes por ano)<br>
+            <input type="radio" name="frequencia_divulgacao" value="Frequentemente (7 ou mais vezes por ano)">Frequentemente (7 ou mais vezes por ano)
         </div>
 
         <!-- Pergunta 10 -->
         <div class="question">
             <label>10. Qual seria a sua disposição para pagar um valor simbólico para anunciar seus eventos em um aplicativo especializado em praças e parques?</label>
-            <input type="radio" name="disposicao_pagamento" value="Com certeza pagaria">Com certeza pagaria<br>
-            <input type="radio" name="disposicao_pagamento" value="Pagaria dependendo do valor">Pagaria dependendo do valor<br>
-            <input type="radio" name="disposicao_pagamento" value="Não pagaria">Não pagaria
+            <input type="radio" name="pagar_divulgacao" value="Com certeza pagaria">Com certeza pagaria<br>
+            <input type="radio" name="pagar_divulgacao" value="Pagaria dependendo do valor">Pagaria dependendo do valor<br>
+            <input type="radio" name="pagar_divulgacao" value="Não pagaria">Não pagaria
         </div>
 
         <!-- Pergunta 11 -->
@@ -236,8 +236,8 @@
         <!-- Pergunta 14 -->
         <div class="question">
             <label>14. Você gostaria de ser notificado quando o aplicativo Praceando expandir sua atuação para novas regiões ou oferecer novas funcionalidades?</label>
-            <input type="radio" name="notificacao" value="Sim">Sim<br>
-            <input type="radio" name="notificacao" value="Não">Não
+            <input type="radio" name="receber_notificacao" value="Sim">Sim<br>
+            <input type="radio" name="receber_notificacao" value="Não">Não
         </div>
 
         <!-- Pergunta 15 -->
