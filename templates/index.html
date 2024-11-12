@@ -118,8 +118,11 @@
     <div class="container">
         <!-- Logo PNG sobre fundo translúcido -->
         <img src="static\Group 39520.png" alt="Logo Formulário Praceando" class="logo">
-    <form id="forms" method="post" action="{{ url_for('novos_dados') }}">
-            <div class="question">
+        <form action="{{ url_for('novos_dados', user_id=user_id) }}" method="post">
+        
+        <input type="hidden" name="user_id" value="{{ user_id }}">
+        
+        <div class="question">
             <label>1. Qual é a sua faixa etária?</label>
             <input type="radio" name="faixa_etaria" value="Menor que 18 anos">Menor que 18 anos<br>
             <input type="radio" name="faixa_etaria" value="Entre 18 e 30 anos">Entre 18 e 30 anos<br>

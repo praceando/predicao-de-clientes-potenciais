@@ -1,11 +1,33 @@
 from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd 
 import joblib as jb
+import psycopg2 
+import os
+from dotenv import load_dotenv
 
 transformer = jb.load("./transformer_anunciante.joblib")    
 predict = jb.load("./predict_anunciante.joblib")
 
 app = Flask(__name__)
+load_dotenv()
+
+def salvar_banco(user_id):
+    conn = None
+    cursor = None
+    try:
+        conn = psycopg2.connect(os.getenv('LINK_2ANO_POSTGRESQL'))
+        cursor = conn.cursor() 
+        cursor.execute("UPDATE consumidor SET is_possivel_anunciar = %s WHERE id_consumidor = %s", (True, user_id))
+        conn.commit()
+    except psycopg2.Error as e: 
+        print(e)
+        if conn:
+            conn.rollback()
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
 
 
 def processar_base_forms(base_forms: pd.DataFrame) -> pd.DataFrame:
@@ -40,9 +62,9 @@ def processar_base_forms(base_forms: pd.DataFrame) -> pd.DataFrame:
 
 
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+@app.route('/<int:user_id>')
+def home(user_id):
+    return render_template('index.html',user_id=user_id)
 
 @app.route('/submit', methods=['POST'])
 def novos_dados():
@@ -56,10 +78,10 @@ def novos_dados():
                  "is_microempreendedor", "frequencia_divulgacao", "pagar_divulgacao", "meios_divulgacao", "receber_notificacao"]
     )
     
-    regitro = processar_base_forms(registro)
-    regitro = pd.get_dummies(regitro, columns=["meios_divulgacao"])
-    regitro = regitro.reset_index()
-    regitro = regitro.drop_duplicates(subset="index",keep="first").drop("index", axis=1)    
+    registro = processar_base_forms(registro)
+    registro = pd.get_dummies(registro, columns=["meios_divulgacao"])
+    registro = registro.reset_index()
+    registro = registro.drop_duplicates(subset="index",keep="first").drop("index", axis=1)    
     
     # Lista de colunas obrigatórias
     required_columns = [
@@ -78,6 +100,9 @@ def novos_dados():
     # Realiza a transformação
     registro = transformer.transform(registro)
     result = predict.predict(registro)
+    
+    if result[0] == 1:
+        salvar_banco(req["user_id"])
     
     
     return redirect(url_for('sucesso', result=result[0]))
