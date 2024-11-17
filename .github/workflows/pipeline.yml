@@ -21,8 +21,8 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
-  - name: Render Deploy
-      uses: johnbeynon/render-deploy-action@v0.0.8
-      with:
-        service-id: "${{RENDER_SERVICE_ID}}"
-        api-key: "${{RENDER_API_KEY}}"
+    - name: Render Deploy
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: "${{RENDER_SERVICE_ID}}"
+          api-key: "${{RENDER_API_KEY}}"
