@@ -1,4 +1,4 @@
-name: Prediction
+name: Predição de anunciante
 
 on:
   push:
